@@ -1,0 +1,10 @@
+﻿@model dynamic
+
+<h2>My Prescriptions</h2>
+
+@foreach (var p in Model)
+{
+    <p>Medicines: @p.medicines</p>
+    <p>Notes: @p.notes</p>
+    <hr />
+}

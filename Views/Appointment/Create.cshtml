@@ -1,0 +1,14 @@
+﻿<form method="post">
+    <input name="appointmentDate" type="date" />
+    <select name="timeSlot">
+        <option value="10:00-10:15">10:00-10:15</option>
+        <option value="10:15-10:30">10:15-10:30</option>
+        <option value="10:30-10:45">10:30-10:45</option>
+    </select>
+    <button type="submit">Book</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <p>@ViewBag.Result</p>
+}

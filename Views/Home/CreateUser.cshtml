@@ -1,0 +1,22 @@
+﻿@model ClinicFrontend.Models.UserModel
+
+<form asp-action="CreateUser" method="post">
+
+    <input name="name" placeholder="Name" />
+    <input name="email" placeholder="Email" />
+    <input name="password" placeholder="Password" />
+    <input name="phone" placeholder="Phone" />
+
+    <select name="role">
+        <option value="doctor">doctor</option>
+        <option value="patient">patient</option>
+        <option value="receptionist">receptionist</option>
+    </select>
+
+    <button type="submit">Create</button>
+
+    @if (ViewBag.Result != null)
+    {
+        <p>@ViewBag.Result</p>
+    }
+</form>

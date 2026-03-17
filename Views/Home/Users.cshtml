@@ -1,0 +1,21 @@
+﻿@model List<ClinicFrontend.Models.UserModel>;
+
+<h2>Users</h2>
+
+<table border="2" cellpadding="8">
+
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Role</th>
+	</tr>
+	@foreach(var u in Model)
+	{
+		<tr>
+			<td>@u.name</td>
+			<td>@u.email</td>
+			<td>@u.role</td>
+
+		</tr>
+	}
+</table>

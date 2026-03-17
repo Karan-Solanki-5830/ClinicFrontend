@@ -1,0 +1,26 @@
+﻿@model List<ClinicFrontend.Models.AppointmentModel>;	
+
+<h2>Appointments</h2>
+
+@if (ViewBag.Error != null)
+{
+	<p>@ViewBag.Error</p>
+}
+
+<table border="2" cellpadding="8">
+
+	<tr>
+		<th>Date</th>
+		<th>Time slot</th>
+		<th>View</th>
+	</tr>
+	@foreach (var u in Model)
+	{
+		<tr>
+			<td>@u.appointmentDate</td>
+			<td>@u.timeSlot</td>
+			<td><a href="/Appointment/Details/@u.id">View</a></td>
+
+		</tr>
+	}
+</table>

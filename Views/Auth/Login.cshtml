@@ -1,0 +1,21 @@
+﻿@model ClinicFrontend.Models.LoginModel
+
+<h2> Login Page </h2>
+
+<form method = "post" >
+	<div>
+		<label> Email </label>
+		<input name="Email" type="text"/>
+	</div>
+	</br>
+	<div>
+		<label> Password </label>
+		<input name="Password" type="password"/>
+	</div>
+	</br>
+	<button type="submit">Login</button>
+	</form>
+	@if(ViewBag.Result != null)
+{
+	<p>@ViewBag.Result</p>
+}
